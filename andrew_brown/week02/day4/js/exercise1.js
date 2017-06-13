@@ -37,41 +37,58 @@
 // ## [Here is some inspiration](https://gist.github.com/ga-wolf/ae7d0e1df214e45213c5)
 
 
-var cat = document.getElementById("cat");
+// var cat = document.getElementById("cat");
+//
+// var maxWidth = 200;
+//
+// cat.style.position = 'absolute';
+// cat.style.left = '0px';
+//
+// var walking = function() {
+//   var oldLeft = parseInt(cat.style.left);
+//   var newLeft = oldLeft + 1;
+//   cat.style.left = newLeft + 'px';
+//
+// if ( parseInt (cat.style.left) >= maxWidth)
+//   cat.style.transform = "scaleX(-1)";
+//   //window.FunctionName=function(){return false;};
+//
+//   }
+// window.setInterval(walking, 9);
+//
+// var jackson = document.getElementById("jackson");
+//
+// var maxWidth = 200;
+//
+// jackson.style.position = 'absolute';
+// jackson.style.left = '0px';
+//
+// var walking = function() {
+//   var oldLeft = parseInt(jackson.style.left);
+//   var newLeft = oldLeft + 1;
+//   jackson.style.left = newLeft + 'px';
+//
+// if ( parseInt (jackson.style.left) >= maxWidth)
+//   jackson.style.transform = "scaleX(-1)";
+//   //window.FunctionName=function(){return false;};
+//
+//   }
+//
+// window.setInterval(walking, 9);
 
-var maxWidth = 200;
+var $cat = '#cat';
 
-cat.style.position = 'absolute';
-cat.style.left = '0px';
+$(document).ready(function() {
+  $($cat).mouseover(function() {
+    $(this).animate({
+      //height: '-10px',
+      right: '0px'
+    });
+  });
+});
 
-var walking = function() {
-  var oldLeft = parseInt(cat.style.left);
-  var newLeft = oldLeft + 1;
-  cat.style.left = newLeft + 'px';
-
-if ( parseInt (cat.style.left) >= maxWidth)
-  cat.style.transform = "scaleX(-1)";
-  //window.FunctionName=function(){return false;};
-
-  }
-window.setInterval(walking, 9);
-
-var jackson = document.getElementById("jackson");
-
-var maxWidth = 200;
-
-jackson.style.position = 'absolute';
-jackson.style.left = '0px';
-
-var walking = function() {
-  var oldLeft = parseInt(jackson.style.left);
-  var newLeft = oldLeft + 1;
-  jackson.style.left = newLeft + 'px';
-
-if ( parseInt (jackson.style.left) >= maxWidth)
-  jackson.style.transform = "scaleX(-1)";
-  //window.FunctionName=function(){return false;};
-
-  }
-
-window.setInterval(walking, 9);
+$($cat).click(function() {
+  $(this).animate({
+    height: '-10px',
+  });
+});

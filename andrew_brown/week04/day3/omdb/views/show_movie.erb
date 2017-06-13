@@ -1,0 +1,9 @@
+
+<% @results.each do |result| %>
+
+  <h2><%= result["title"] %></h2>
+
+  <a href = "https://www.themoviedb.org/movie/<%= result["id"] %>" ><img src ="http://image.tmdb.org/t/p/w300<%= result["poster_path"] %>"></a>
+  <p><%= result["overview"] %></p>
+
+<% end %>
